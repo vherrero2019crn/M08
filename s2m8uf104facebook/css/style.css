@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9ebed;
+}
+
+#barra {
+  height: 43px;
+  background-color: #5066ae;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#contenido {
+  height: 1000px;
+  width: 850px;
+  background-color: #e9ebed;
+  margin: auto;
+  margin-top: 43px;
+}
+
+#contenido #cabeza {
+  height: 352px;
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  background-image: url(../img/fondo.png);
+  background-repeat: no-repeat;
+  border: 1px solid #DDD;
+
+  }
+
+#contenido #cabeza img {
+  position: relative;
+  top: 160px;
+  left: 21px;
+  border-radius: 50%;
+  border: solid white 4px;
+  box-shadow: 2px 2px 2px #666666;
+}
+
+#contenido #cabeza h2 {
+  position: relative;
+  top: 70px;
+  left: 230px;
+  font-family: sans-serif;
+  font-size: 16pt;
+  text-shadow: 2px 2px 2px #666666;
+  color: white;
+}
+
+#contenido #menu {
+  height: 38px;
+  width: 581px;
+  float: right;
+  background: #e9ebed;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 89px;
+  left: -40px;
+}
+
+li {
+  list-style: none;
+  float: left;
+  margin: 0 0 0 1px;
+  padding: 0 20px;
+  font-size: 10pt;
+  font-family: "Lucida Grande", sans-serif;
+  font-weight: bold;
+  height: 38px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#principal div {
+  height: 1400px;
+  width: 850px;
+  background-color: #DE3C4B;
+  border-radius: 3px;
+  border: solid 1px #DDD;
+
+}
+
+#principal #presentación {
+  height: 433px;
+  width: 321px;
+}
+
+#principal #fotos {
+  height: 48px;
+  width: 321px;
+}
+
+#principal #amigos {
+  height: 48px;
+  width: 321px;
+}
+
+#principal #sabes {
+  height: 48px;
+  width: 321px;
+}
+
+#principal #post{
+height: 1200px;
+width: 516px;
+}
+
+#principal .derecha {
+  background-color: white;
+  float: left;
+  margin-bottom: 5px;
+}
+
+#principal .izquierda {
+  background-color: yellow;
+  float: right;
+}

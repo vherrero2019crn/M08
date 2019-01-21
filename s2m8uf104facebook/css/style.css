@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #e9ebed;
+  font-family: "Lucida Grande", sans-serif;
 }
 
 #barra {
@@ -11,6 +12,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 #contenido {
@@ -19,6 +21,7 @@ body {
   background-color: #e9ebed;
   margin: auto;
   margin-top: 43px;
+
 }
 
 #contenido #cabeza {
@@ -39,6 +42,7 @@ body {
   border-radius: 50%;
   border: solid white 4px;
   box-shadow: 2px 2px 2px #666666;
+  background-size: contain;
 }
 
 #contenido #cabeza h2 {
@@ -60,16 +64,15 @@ body {
   margin: 0;
   position: relative;
   top: 89px;
-  left: -40px;
+  left: 2px;
 }
 
-li {
+#menu li {
   list-style: none;
   float: left;
   margin: 0 0 0 1px;
   padding: 0 20px;
   font-size: 10pt;
-  font-family: "Lucida Grande", sans-serif;
   font-weight: bold;
   height: 38px;
   background: white;
@@ -78,47 +81,148 @@ li {
   align-items: center;
 }
 
-#principal div {
-  height: 1400px;
-  width: 850px;
-  background-color: #DE3C4B;
+#datos li{
+
+
+}
+
+#principal aside  {
+    clear: left;
+}
+
+#principal aside div {
+  float: left;
+  background-color: #e9ebed;
   border-radius: 3px;
+  overflow: hidden;
+  width: 388px;
+  border: solid 1px #DDD;
+}
+
+#principal h3{
+
+  background-image: url(../img/lateral.gif);
+  background-repeat: no-repeat;
+  height: 24px;
+  text-indent: 32px;
+  line-height: 24px;
+}
+
+#principal #fotos h3 {
+  background-position: 0 -24px;
+}
+
+#principal #amigos h3 {
+  background-position: 0 -48px;
+}
+
+#principal #sabes h3 {
+  background-position: 0 -72px;
+}
+
+#presentacion p {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 15px;
+
+}
+
+#presentacion li {
+  font-size: 12px;
+line-height: 1.5;
+}
+
+#presentacion .domicilio  {
+  list-style-image: url(../img/icones_domicili.png);
+}
+
+#presentacion .estudios {
+  list-style-image: url(../img/icones_estudis.png);
+
+}
+
+#presentacion .trabajo {
+  list-style-image: url(../img/icones_feina.png);
+}
+
+#presentacion .amor {
+  list-style-image: url(../img/icones_sentimental.png);
+}
+
+
+#principal #post .publicaciones{
+  height: 300px;
+  background-color: #CCC;
+  margin-bottom: 10px;
   border: solid 1px #DDD;
 
 }
 
-#principal #presentación {
-  height: 433px;
-  width: 321px;
-}
-
-#principal #fotos {
-  height: 48px;
-  width: 321px;
-}
-
-#principal #amigos {
-  height: 48px;
-  width: 321px;
-}
-
-#principal #sabes {
-  height: 48px;
-  width: 321px;
-}
-
-#principal #post{
-height: 1200px;
-width: 516px;
-}
+#principal .izquierda {
+  float: left;
+   width: 298px;
+  }
 
 #principal .derecha {
-  background-color: white;
-  float: left;
-  margin-bottom: 5px;
+  clear: right;
+  float: right;
+  width: 492px;
 }
 
-#principal .izquierda {
-  background-color: yellow;
-  float: right;
+#principal .izquierda, .derecha {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  padding: 12px;
+  height: auto;
+}
+
+.izquierda li, .derecha li {
+  list-style-type: none;
+}
+
+#presentacion, #amigos, #fotos {
+
+}
+
+#amigos ul {
+  padding:0;
+}
+
+#amigos li {
+  width: 95px;
+  height: 95px;
+  background-color: green;
+  float: left;
+  margin: 2px;
+  background-size: cover;
+}
+
+#amigos .foto1{
+  background-image: url(https://sperez2019crn.github.io/M08/s2m8uf104_sperez/img/fotoperfil.jpg);
+}
+#amigos .foto2{
+  background-image: url(https://acarranco2019crn.github.io/m08/s2m8uf0104carranco/img/profile.jpg);
+}
+#amigos .foto3{
+  background-image: url(https://iprados2019crn.github.io/M08/s2m8uf104_iprados/img/fotoperfil.jpg);
+}
+#amigos .foto4{
+background-image: url(https://psanz2019crn.github.io/M08/s2m8uf104_sanz/img/aoperfil.gif);
+}
+#amigos .foto5{
+background-image: url(https://nchia2019crn.github.io/M08/s2m8uf104_chia/img/perfil.jpg);
+}
+#amigos .foto6{
+background-image: url(https://mmunozp2019crn.github.io/M08/s2m8uf104_munoz/img/logo.jpg);
+}
+#amigos .foto7{
+background-image: url(https://vherrero2019crn.github.io/M08/s2m8uf104facebook/img/perfil.png);
+}
+#amigos .foto8{
+background-image: url(https://smarcer2019crn.github.io/M08/s2m8uf104_marcer/img/perfil_yo.jpg);
+}
+#amigos .foto9{
+background-image: url(https://gbonsoms2019crn.github.io/M08/s2m8uf104_facebook/img/pajaro.jpg);
 }

@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  font-family: 'Helvetica', sans-serif;
+}
+
+#menu #lista {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  height: 50px;
+  width: 100%;
+}
+
+#menu img {
+  position: absolute;
+  margin: 5px 20px;
+  top: 5px;
+}
+
+#menu #lista li {
+  position: relative;
+  left: 70px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  float: left;
+  line-height: 50px;
+}
+
+#menu #lista .redes {
+  float: right;
+  position: relative;
+  padding: 5px;
+
+}
+
+#interessants {
+  width: auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 22px;
+}
+
+#interessants .docint {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 175px;
+  height: 260px;
+  border-radius: 5px;
+  margin: 0 20px 70px 0;
+  float: left;
+
+}
+
+
+.docint:hover{
+  opacity: 0.5;
+}
+
+
+#interessants h2, h3 {
+  position: relative;
+  top: 255px;
+  line-height: 10px;
+  color: #CCC;
+}
+
+#interessants h2 {
+  font-size: 14px;
+}
+
+#interessants h3 {
+  font-size: 11px;
+  display: inline;
+  padding-right: 41px;
+
+}
+
+#interessants .foto1 {
+  background-image: url(../img/1982Koyaanisqatsi.jpg);
+}
+
+#interessants .foto2 {
+  background-image: url(../img/2004YTuQueSabes.jpg);
+}
+
+#interessants .foto3 {
+  background-image: url(../img/2005Earthlings.jpg);
+}
+
+#interessants .foto4 {
+  background-image: url(../img/2007Helvetica.jpg);
+}
+
+#interessants .foto5 {
+  background-image: url(../img/2007Sicko.jpg);
+}
+
+#interessants .foto6 {
+  background-image: url(../img/2008Zeitgeist2.jpg);
+}
+
+#interessants .foto7 {
+  background-image: url(../img/2009ArtAndCopy.jpg);
+}
+
+#interessants .foto8 {
+  background-image: url(../img/2009RipARemixManifesto.jpg);
+}
+
+#interessants .foto9 {
+  background-image: url(../img/2010ComprarTirarComprar.jpg);
+}
+
+#interessants .foto10 {
+  background-image: url(../img/2010InsideJob.jpg);
+}
+
+#secciovistos{
+  width: auto;
+  height: auto;
+  padding: 0 20px;
+
+}
+
+#vistos .docint {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 175px;
+  height: 260px;
+  border-radius: 5px;
+  margin: 0 20px 70px 0;
+  float: left;
+}
+
+#vistos h1 {
+  padding-left: 20px;
+}
+
+
+#vistos h2, h3 {
+  position: relative;
+  top: 255px;
+  line-height: 10px;
+  color: #CCC;
+}
+
+#vistos h2 {
+  font-size: 14px;
+}
+
+#vistos h3 {
+  font-size: 11px;
+  float: left;
+  padding: 0 42px 0 0;
+}
+
+#vistos .docint {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 175px;
+  height: 260px;
+  border-radius: 5px;
+  margin: 0 20px 70px 0;
+  float: left;
+
+}
+
+#vistos .foto1 {
+  background-image: url(../img/2011LaDoctrinaDeShock.jpg);
+}
+
+#vistos  .foto2 {
+  background-image: url(../img/2012SearchingForSugarMan.jpg);
+}
+
+#vistos .foto3 {
+  background-image: url(../img/2012TheActOfKilling.jpg);
+}
+
+#vistos .foto4 {
+  background-image: url(../img/2013ElEspirituDel45.jpg);
+}

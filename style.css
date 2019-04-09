@@ -1,0 +1,169 @@
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  //CSS
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  //CSS
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  //CSS
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: #2C2A4A;
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    color: #333;
+  }
+
+  h3 {
+    margin-top: 1em;
+    text-align: center;
+    padding: 0;
+    color: #eee;
+    font-size: 1.2em;
+    padding: 0.2em;
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+    color: #AAA;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  #container {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: #262630;
+  }
+
+  #container-top {
+    width: 100%;
+    margin: 10% 0;
+    text-align: center;
+  }
+
+  #container-top img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    width:  33vh;
+    height: 33vh;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    box-shadow: 0px 5px 50px 5px rgba(0, 0, 0, 0.60);
+  }
+
+  #container-bottom {
+    text-align: center;
+    margin-top: 20%;
+    width: 100%;
+
+
+  }
+
+  #btns {
+    text-align: center;
+    margin-top: 10%;
+    }
+
+  #playPause {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 35px;
+    line-height: 35px;
+    color: #FFF;
+  }
+
+  #playPause {
+    margin: 0 40px 0 40px;
+  }
+
+  #back, #next {
+    font-size: 20px;
+    line-height: 35px;
+    border: 0;
+    margin-right: 5px;
+    margin-left: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: #F2F2F4;
+  }
+
+  #rnd, #loop {
+      display: none;
+      margin-right: 5px;
+  }
+
+  #loop:checked + label {
+    color: #ff564c;
+    transition: all 0.30s ease;
+  }
+
+  #rnd:checked + label {
+    color: #ff564c;
+    transition: all 0.30s ease;
+  }
+
+
+  #timeNow {
+    margin: 40px 30px 20px 0;
+    width: 300px;
+    float: right;
+    text-align: left;
+    font-size: 14px;
+    color: #FFF;
+  }
+
+  #totalTime {
+    text-align: right;
+  }
+
+  #durationBar {
+    margin: 0 auto;
+    width: 300px;
+    height: 3px;
+    background: #364156;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  #expandingBar {
+    height: 3px;
+    background-color: #F2F2F4;
+  }
+
+  #movingBar {
+    height: 3px;
+    background-color: #F2F2F4;
+  }

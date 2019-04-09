@@ -1,155 +1,157 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.3.1.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlaySound</title>
-  </head>
-  <body>
 
-    <div id="container">
-      <div id="container-top">
-        <img src ="img/am.jpg"/>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlaySound</title>
+</head>
 
-      <div id="container-bottom">
+<body>
+
+  <div id="container">
+    <div id="container-top">
+      <img src="img/am.jpg" />
+    </div>
+
+
+    <div id="container-bottom">
         <h3 id="songName"></h3>
         <h4 id="songArtist"> </h4>
+        <div id="timeNow"> 00:00 <id="totalTime"> 00:00 </style></div>
 
-
-        <div id="timeNow"> 00:00   <id="totalTime"> 00:00 </style></div>
         <div id="durationBar">
           <div id="expandingBar"></div>
           <div id="movingBar"></div>
-      </div>
+        </div>
 
         <div id="btns">
 
-          <button id="rnd" onclick="back()"><i class="fas fa-random"></i> </button>
+          <input type="checkbox" id="rnd"/>
+          <label class="fas fa-random" for="rnd"></label>
+
+          <button id="rnd" onclick="rnd"><i class="fas fa-random"></i> </button>
 
           <button id="back" onclick="back()"><i class="fas fa-backward"></i> </button>
+
           <button id="playPause" onclick="playPause()"><i class="fas fa-pause"></i> </button>
+
           <button id="next" onclick="next()"><i class="fas fa-forward"></i> </button>
 
-          <button id="loop" onclick="next()"><i class="fas fa-sync-alt"></i> </button>
+          <input type="checkbox" id="loop"/>
+          <label class="fas fa-sync-alt" for="loop"></label>
+
+
         </div>
 
     </div>
+
 </div>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
+    var songs = ["music/one.mp3", "music/two.mp3", "music/three.mp3", "music/four.mp3", "music/five.mp3"]
 
-        var songs =["music/one.mp3", "music/two.mp3", "music/three.mp3", "music/four.mp3", "music/five.mp3"]
+    var songNames = ["Four Out Of Five", "POP/STARS", "Psycho", "HUMBLE", "Beethoven's 5th Symphony"]
 
-        var songNames =["Four Out Of Five", "POP/STARS", "Psycho", "HUMBLE", "Beethoven's 5th Symphony"]
+    var artist = ["Arctic Monkeys", "K/DA", "Post Malone", "Kendrick Lamar ft Skrillex", "Ludwig van Beethoven"]
 
-        var artist =["Arctic Monkeys", "K/DA", "Post Malone", "Kendrick Lamar ft Skrillex", "Ludwig van Beethoven"]
+    var poster = ['img/am.jpg', 'img/kda.jpg', 'img/postmalone.png', 'img/lamar.jpg', 'img/beethoven.jpg']
 
-        var poster =['img/am.jpg', 'img/kda.jpg', 'img/postmalone.png', 'img/lamar.jpg', 'img/beethoven.jpg']
-
-        var songName = document.getElementById("songName");
-        var songArtist = document.getElementById("songArtist");
-        var expandingBar = document.getElementById("expandingBar");
-        var timeNow = document.getElementById("timeNow");
-
-
-        var song = new Audio();
-        var currentSong = 0;
-        window.onload = playSong;
+    var songName = document.getElementById("songName");
+    var songArtist = document.getElementById("songArtist");
+    var expandingBar = document.getElementById("expandingBar");
+    var timeNow = document.getElementById("timeNow");
 
 
-          function playSong() {
-            song.src = songs[currentSong];
-            songName.textContent = songNames[currentSong];
-            songArtist.textContent = artist[currentSong];
-            song.play()
-
-          }
-
-          function playPause() {
-            if(song.paused){
-                song.play();
-              $("#playPause i").removeClass("fa-play").addClass("fa-pause");
-            }
-            else{
-              song.pause();
-              $("#playPause i").removeClass("fa-pause").addClass("fa-play");
-            }
-          }
-
-          song.addEventListener('timeupdate', function(){
-              var position = song.currentTime / song.duration;
-              expandingBar.style.width = position * 100 + '%';
-              convertTime(Math.round(song.currentTime));
-              if(song.ended){
-                next();
-              }
-          });
-
-          function convertTime(seconds){
-            var min = Math.floor(seconds / 60);
-            var sec = seconds % 60;
-            min = (min < 10) ? "0" + min : min;
-            sec = (sec < 10) ? "0" + sec : sec;
-            timeNow.textContent = min + ":" + sec;
-
-            totalTime(Math.round(song.duration));
-          }
-
-          function totalTime(seconds){
-            var min = Math.floor(seconds / 60);
-            var sec = seconds % 60;
-            min = (min < 10) ? "0" + min : min;
-            sec = (sec < 10) ? "0" + sec : sec;
-            timeNow.textContent += " / " + min + ":" + sec;
+    var song = new Audio();
+    var currentSong = 0;
+    window.onload = playSong;
 
 
-          }
+    function playSong() {
+      song.src = songs[currentSong];
+      songName.textContent = songNames[currentSong];
+      songArtist.textContent = artist[currentSong];
+      song.play()
 
-          function next(){
-            currentSong++;
-            if(currentSong > 4){
-              currentSong = 0;
-            }
+    }
 
-            playSong();
-            $("play i").removeClass("fa-play").addClass("fa-pause");
-            $("#container-top img").attr("src", poster[currentSong]);
+    function playPause() {
+      if (song.paused) {
+        song.play();
+        $("#playPause i").removeClass("fa-play").addClass("fa-pause");
+      } else {
+        song.pause();
+        $("#playPause i").removeClass("fa-pause").addClass("fa-play");
+      }
+    }
 
-          }
-
-          function back(){
-            currentSong--;
-            if(currentSong < 0){
-              currentSong = 4;
-            }
-
-            playSong();
-            $("#playPause i").removeClass("fa-play").addClass("fa-pause");
-            $("#container-top img").attr("src", poster[currentSong]);
-
-          }
-
-          $(document).ready(function(){
-            $("#container").click(function(){
-              $("#container-bottom").fadeIn();
+    song.addEventListener('timeupdate', function() {
+      var position = song.currentTime / song.duration;
+      expandingBar.style.width = position * 100 + '%';
+      convertTime(Math.round(song.currentTime));
+      if (song.ended) {
+        next();
+      }
     });
-});
 
-              $(document).ready(function(){
-                $("#container").click(function(){
-                    $("#div2").fadeIn("slow");
-                  });
-              });
+    function convertTime(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      min = (min < 10) ? "0" + min : min;
+      sec = (sec < 10) ? "0" + sec : sec;
+      timeNow.textContent = min + ":" + sec;
+
+      totalTime(Math.round(song.duration));
+    }
+
+    function totalTime(seconds) {
+      var min = Math.floor(seconds / 60);
+      var sec = seconds % 60;
+      min = (min < 10) ? "0" + min : min;
+      sec = (sec < 10) ? "0" + sec : sec;
+      timeNow.textContent += " / " + min + ":" + sec;
 
 
+    }
 
-    </script>
+    function next() {
+      currentSong++;
+      if (currentSong > 4) {
+        currentSong = 0;
+      }
+
+      playSong();
+      $("play i").removeClass("fa-pause").addClass("fa-play");
+      $("#container-top img").attr("src", poster[currentSong]);
+
+    }
+
+    function back() {
+      currentSong--;
+      if (currentSong < 0) {
+        currentSong = 4;
+      }
+
+      playSong();
+      $("#playPause i").removeClass("fa-pause").addClass("fa-play");
+      $("#container-top img").attr("src", poster[currentSong]);
+
+    }
+
+//    $(document).ready(function() {
+//      $("#container").click(function() {
+//        $("#container-bottom").fadeIn("slow");
+//      });
+//    });
+
+  </script>
 
 
-  </body>
+</body>
+
 </html>

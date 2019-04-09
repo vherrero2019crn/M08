@@ -80,6 +80,7 @@
   }
 
   #container-bottom {
+    display: none;
     text-align: center;
     margin-top: 20%;
     width: 100%;

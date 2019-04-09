@@ -38,7 +38,7 @@
 
           <button id="back" onclick="back()"><i class="fas fa-backward"></i> </button>
 
-          <button id="playPause" onclick="playPause()"><i class="fas fa-pause"></i> </button>
+          <button id="playPause" onclick="playPause()"><i class="fas fa-play"></i> </button>
 
           <button id="next" onclick="next()"><i class="fas fa-forward"></i> </button>
 
@@ -126,7 +126,7 @@
       }
 
       playSong();
-      $("play i").removeClass("fa-pause").addClass("fa-play");
+      $("play i").removeClass("fa-play").addClass("fa-pause");
       $("#container-top img").attr("src", poster[currentSong]);
 
     }
@@ -138,16 +138,16 @@
       }
 
       playSong();
-      $("#playPause i").removeClass("fa-pause").addClass("fa-play");
+      $("#playPause i").removeClass("fa-play").addClass("fa-pause");
       $("#container-top img").attr("src", poster[currentSong]);
 
     }
 
-//    $(document).ready(function() {
-//      $("#container").click(function() {
-//        $("#container-bottom").fadeIn("slow");
-//      });
-//    });
+    $(document).ready(function() {
+      $("#container").click(function() {
+        $("#container-bottom").fadeIn("slow");
+      });
+   });
 
   </script>
 

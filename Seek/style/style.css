@@ -1,0 +1,112 @@
+/* 1em=15px */
+
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  //CSS
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  //CSS
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  //CSS
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    text-align: center;
+  }
+
+#displaytag{
+  margin: 5em;
+  line-height : 0.2em;
+}
+
+  displaytag p {
+    display: inline-block;
+    font-weight: lighter;
+    font-size: 1em;
+    line-height : 0.2em;
+  }
+
+  #tag {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    color: #6844fc;
+  }
+
+  .mainCards{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+  }
+
+  .card{
+    width: 100%;
+    height: 175px;
+    background-color: purple;
+    margin: 3em 0;
+    box-shadow: 3px;
+    border-radius: 25px;
+    box-shadow: 0px -1px 10px rgba(0,0,0,0.50);
+
+  }
+
+
+.open {
+
+  width: 100%;
+  height: 325px;
+  transition: 1s;
+}
+blur   {
+    filter: blur(5px);
+  }
+
+
+
+  .card h2{
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    line-height: 2em;
+    padding: 0  0  0 15px;
+
+  }
+
+  .card p{
+    text-align: left;
+    font-size: 0.8em;
+    padding: 25px 0 0 15px;
+
+  }
+}

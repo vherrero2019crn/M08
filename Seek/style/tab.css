@@ -1,0 +1,42 @@
+#navegador {
+  width: 100%;
+  height: 4.2em;
+  position: fixed;
+  bottom: 0;
+  background-color: #FFF;
+  box-shadow: 1px 0px 0px 1px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+
+
+}
+
+#navegador ul {
+    display: inline;
+    padding: 1em;
+
+
+
+}
+#navegador li {
+    display: inline-block;
+    line-height: 5em;
+
+
+}
+#navegador li a {
+    color: #FFF;
+    padding: 0 1.1em;
+    text-decoration: none;
+
+}
+
+.icon {
+  font-size: 1.4em;
+  color: #000;
+}
+
+.plus{
+  font-size: 1.8em;
+  color: purple;
+}

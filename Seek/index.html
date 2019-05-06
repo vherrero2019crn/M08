@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="jquery-3.4.1.js">
+
+  </script>
+  <link rel="stylesheet" href="style/loading.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/tab.css">
+  <title>Seek</title>
+</head>
+
+
+
+
+<body>
+
+  <div id="displaytag">
+    <p>Projectes a</p><br>
+    <p id="tag">#productor</p>
+  </div>
+
+<!-- CUERPO DE LA PAGINA ( CARTAS ) -->
+
+  <div class="mainCards">
+    <div class="card">
+      <h2> Productor 8-bit</h2>
+      <p>
+        Necesitem un productor que sápiga fer música 8-bit.
+
+      </p>
+    </div>
+    <div class="card">
+      <h2>Compositor/productor</h2>
+      <p>Busquem un productor amb experiéncia per la creació d'un CD.</p>
+
+    </div>
+
+    <div class="card">
+      <h2> Productor 8-bit</h2>
+      <p>
+        Necesitem un productor que sápiga fer música 8-bit.
+
+      </p>
+    </div>
+
+  </div>
+
+<div id="raya"></div>
+ <div id="navegador">
+    <ul>
+      <li>
+        <a href="#">
+          <img style="width: 1.7em;" src="img/logo.svg">
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+            <i class="fas fa-search icon"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fas fa-plus-circle plus"></i>
+        </a>
+
+        <li>
+          <a href="#">
+            <i class="fas fa-star icon"></i>
+          </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fas fa-user-circle icon"></i>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+
+<script type="text/javascript">
+
+$( ".card" ).click(function() {
+  $(this).toggleClass("open");
+});
+
+</script>
+
+</body>
+
+</html>
